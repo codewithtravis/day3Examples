@@ -131,3 +131,52 @@ document.getElementById("myDog").addEventListener("click", function(){
 function test1(name1){
     alert("today " + name1) 
 }
+
+
+
+//--------------------------------------------------------------------------------
+
+
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+    //alert("This form has been submitted.");
+
+    /*
+    
+    We want the get a value that was entered by the user in the form
+    
+    */
+   // The following line get a value from the input field.
+   let username = document.getElementById("username").value;
+   //console.log(username.length);
+   username = username.trim();// trim gets read of any spaces the user my input
+   
+   if(username == "" || username.length == 0){
+       document.getElementById("username").style.border = "thick solid red";
+       alert("Please enter a valid username.");
+
+   } else {
+       document.getElementById("username").style.backgroundColor = "white";
+   }
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let password = document.getElementById("password").value;
+
+    password = password.trim();
+    confirmPassword = confirmPassword.trim();
+
+    if(password != confirmPassword){
+
+        document.getElementById("password").style.border = "thick solid red";
+        document.getElementById("confirmPassword").style.border = "thick solid red";
+    } else {
+        document.getElementById("confirmPassword").style.border = "thick solid red";
+        document.getElementById("confirmPassword").style.border = "thick solid red";
+    }
+
+    let formTitle = document.getElementById("title");
+
+    newDive.innerHTML = newDiv
+
+   //alert(username);
+   event.preventDefault();
+});
